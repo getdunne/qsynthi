@@ -154,7 +154,7 @@ template<> struct VLEN<double> { static constexpr size_t val=2; };
 // though the MinGW compiler advertises C++17 compliance.
 // MSVC does not trigger this problem, since it apparently always sets
 // __cplusplus to 199711L ...
-#if (__cplusplus >= 201703L) && (!defined(__MINGW32__) && (!__APPLE__))
+#if (__cplusplus >= 201703L) && (!defined(__MINGW32__) && !defined(__APPLE__))
 inline void *aligned_alloc(size_t align, size_t size)
   {
   // aligned_alloc() requires that the requested size is a multiple of "align"
