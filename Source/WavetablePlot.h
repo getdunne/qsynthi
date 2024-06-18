@@ -13,6 +13,7 @@
 #include "list.hpp"
 #include <functional>
 #include <complex>
+#include <thread>
 #include <mutex>
 
 #define SDL_ACTIVE __has_include("SDL.h") && false
